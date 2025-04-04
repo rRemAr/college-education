@@ -1,0 +1,191 @@
+Acer-4567@LAPTOP-G6ESF5UM MINGW64 /
+$ git config --global user.name "rRemAr"
+
+Acer-4567@LAPTOP-G6ESF5UM MINGW64 /
+$ git config --global user.email "159226468+rRemAr@users.noreply.github.com"
+
+Acer-4567@LAPTOP-G6ESF5UM MINGW64 /
+$ cd C:/Users/Acer-4567/Documents/GitHub/college-education
+
+Acer-4567@LAPTOP-G6ESF5UM MINGW64 ~/Documents/GitHub/college-education (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+Acer-4567@LAPTOP-G6ESF5UM MINGW64 ~/Documents/GitHub/college-education (main)
+$ git clone https://github.com/rRemAr/college-education.git
+Cloning into 'college-education'...
+remote: Enumerating objects: 9, done.
+remote: Counting objects: 100% (9/9), done.
+remote: Compressing objects: 100% (5/5), done.
+remote: Total 9 (delta 0), reused 3 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (9/9), done.
+
+Acer-4567@LAPTOP-G6ESF5UM MINGW64 ~/Documents/GitHub/college-education (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        college-education/
+
+nothing added to commit but untracked files present (use "git add" to track)
+Acer-4567@LAPTOP-G6ESF5UM MINGW64 ~/Documents/GitHub/college-education (main)
+$ touch file.txt
+
+Acer-4567@LAPTOP-G6ESF5UM MINGW64 ~/Documents/GitHub/college-education (main)
+$ git branch tree
+
+Acer-4567@LAPTOP-G6ESF5UM MINGW64 ~/Documents/GitHub/college-education (main)
+$ git checkout tree
+Switched to branch 'tree'
+
+Acer-4567@LAPTOP-G6ESF5UM MINGW64 ~/Documents/GitHub/college-education (tree)
+$ touch leaf.txt
+
+Acer-4567@LAPTOP-G6ESF5UM MINGW64 ~/Documents/GitHub/college-education (tree)
+$ git commit -m "первый коммит дз"
+On branch tree
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        college-education/
+        file.txt
+        leaf.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Acer-4567@LAPTOP-G6ESF5UM MINGW64 ~/Documents/GitHub/college-education (tree)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+Acer-4567@LAPTOP-G6ESF5UM MINGW64 ~/Documents/GitHub/college-education (main)
+$ git merge tree
+Already up to date.
+Acer-4567@LAPTOP-G6ESF5UM MINGW64 ~/Documents/GitHub/college-education (main)
+$ git push origin main
+info: please complete authentication in your browser...
+Everything up-to-date
+
+Acer-4567@LAPTOP-G6ESF5UM MINGW64 ~/Documents/GitHub/college-education (main)
+$ git branch plus
+
+Acer-4567@LAPTOP-G6ESF5UM MINGW64 ~/Documents/GitHub/college-education (main)
+$ git checkout plus
+Switched to branch 'plus'
+
+Acer-4567@LAPTOP-G6ESF5UM MINGW64 ~/Documents/GitHub/college-education (plus)
+$ touch lambda.txt
+Acer-4567@LAPTOP-G6ESF5UM MINGW64 ~/Documents/GitHub/college-education (plus)
+$ git add lambda.txt
+
+Acer-4567@LAPTOP-G6ESF5UM MINGW64 ~/Documents/GitHub/college-education (plus)
+$ git commit -m "commit one"
+[plus d00ca3e] commit one
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 lambda.txt
+
+Acer-4567@LAPTOP-G6ESF5UM MINGW64 ~/Documents/GitHub/college-education (plus)
+$ touch work.txt
+
+Acer-4567@LAPTOP-G6ESF5UM MINGW64 ~/Documents/GitHub/college-education (plus)
+$ git add work.txt
+
+Acer-4567@LAPTOP-G6ESF5UM MINGW64 ~/Documents/GitHub/college-education (plus)
+$ git commit -m "commit two"
+[plus 3a091fb] commit two
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 work.txt
+Acer-4567@LAPTOP-G6ESF5UM MINGW64 ~/Documents/GitHub/college-education (plus)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+Acer-4567@LAPTOP-G6ESF5UM MINGW64 ~/Documents/GitHub/college-education (main)
+$ git merge --squash plus
+Updating ab143ff..3a091fb
+Fast-forward
+Squash commit -- not updating HEAD
+ lambda.txt | 0
+ work.txt   | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 lambda.txt
+ create mode 100644 work.txt
+
+Acer-4567@LAPTOP-G6ESF5UM MINGW64 ~/Documents/GitHub/college-education (main)
+$ git commit -m "squashed plus"
+[main 00c6e7a] squashed plus
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 lambda.txt
+ create mode 100644 work.txt
+
+Acer-4567@LAPTOP-G6ESF5UM MINGW64 ~/Documents/GitHub/college-education (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        college-education/
+        file.txt
+        leaf.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Acer-4567@LAPTOP-G6ESF5UM MINGW64 ~/Documents/GitHub/college-education (main)
+$ git add
+Nothing specified, nothing added.
+hint: Maybe you wanted to say 'git add .'?
+hint: Disable this message with "git config set advice.addEmptyPathspec false"
+
+Acer-4567@LAPTOP-G6ESF5UM MINGW64 ~/Documents/GitHub/college-education (main)
+$ git add file.txt
+
+Acer-4567@LAPTOP-G6ESF5UM MINGW64 ~/Documents/GitHub/college-education (main)
+$ git add leaf.txt
+
+Acer-4567@LAPTOP-G6ESF5UM MINGW64 ~/Documents/GitHub/college-education (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   file.txt
+        new file:   leaf.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        college-education/
+
+Acer-4567@LAPTOP-G6ESF5UM MINGW64 ~/Documents/GitHub/college-education (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   college-education
+        new file:   file.txt
+        new file:   leaf.txt
+
+
+Acer-4567@LAPTOP-G6ESF5UM MINGW64 ~/Documents/GitHub/college-education (main)
+$ git pull
+Already up to date.
+Acer-4567@LAPTOP-G6ESF5UM MINGW64 ~/Documents/GitHub/college-education (main)
+$ git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 333 bytes | 166.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/rRemAr/college-education.git
+   ab143ff..00c6e7a  main -> main
